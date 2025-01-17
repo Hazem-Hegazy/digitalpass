@@ -1,0 +1,53 @@
+<!-- filepath: /d:/digitalpass/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalPass</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box, .button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-align: center;
+            flex: 1 1 300px;
+            max-width: 300px;
+            text-decoration: none;
+        }
+        .box:hover, .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .box.green {
+            background-color: #28a745;
+        }
+        .box p, .button p {
+            font-size: 18px; /* حجم النص داخل الصناديق والأزرار */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" onclick="window.location.href='/home'">
+            <p>قم بصناعة الفيديو وحملة الى منصتك المفضلة (انيستجرام/تيكتوك)<br>هام:لاتنسي اضافة اسم منصتنا @digitalpass</p>
+        </div>
+        <div class="box green" onclick="window.location.href='/pricing'">
+            <p>ستصلك رسالة علي بريدك الخاص بمجرد تحقيق نسب المشاهدة المطلوبة</p>
+        </div>
+    </div>
+</body>
+</html>

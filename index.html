@@ -1,0 +1,31 @@
+<!-- filepath: /d:/digitalpass/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>مرحبًا بك في موقع تقديم المهام</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form action="/submit" method="post">
+            <label for="name">أدخل الاسم:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="number">أدخل رقم:</label>
+            <input type="text" id="number" name="number" required>
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>

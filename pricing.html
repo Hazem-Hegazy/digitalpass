@@ -1,0 +1,75 @@
+<!-- filepath: /d:/digitalpass/templates/pricing.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الأسعار</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>خطة الأسعار</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Views</th>
+                    <th>Instagram</th>
+                    <th>TikTok</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100 K</td>
+                    <td>500.LE</td>
+                    <td>250.LE</td>
+                </tr>
+                <tr>
+                    <td>250 K</td>
+                    <td>750.LE</td>
+                    <td>500.LE</td>
+                </tr>
+                <tr>
+                    <td>500K</td>
+                    <td>1000.LE</td>
+                    <td>750.LE</td>
+                </tr>
+                <tr>
+                    <td>1M</td>
+                    <td>1500K</td>
+                    <td>1000K</td>
+                </tr>
+                <tr>
+                    <td>2M</td>
+                    <td>2000.LE</td>
+                    <td>15000.LE</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/" class="button">العودة إلى الصفحة الرئيسية</a>
+    </div>
+</body>
+</html>
